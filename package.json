@@ -1,6 +1,23 @@
 {
+  "watch": {
+    "tree-sitter:test": {
+      "patterns": ["./grammar.js"]
+    },
+    "tree-sitter:play": {
+      "patterns": ["./grammar.js"]
+    }
+  },
+  "scripts": {
+    "build": "npm install --silent && tree-sitter generate",
+    "parse": "npm run build && tree-sitter parse ",
+    "watch:test": "npm-watch tree-sitter:test",
+    "watch:play": "npm-watch tree-sitter:play",
+    "tree-sitter:test": "npm run build && tree-sitter test",
+    "tree-sitter:play": "npm run build && tree-sitter build --wasm && tree-sitter play -q "
+  },
   "devDependencies": {
     "node-addon-api": "^8.4.0",
+    "npm-watch": "^0.13.0",
     "tree-sitter-cli": "^0.25.6"
   }
 }

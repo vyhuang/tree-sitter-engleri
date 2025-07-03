@@ -1,12 +1,232 @@
 [
   {
-    "type": "source_file",
+    "type": "TOP",
     "named": true,
-    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "mixedLine",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conditionExpression",
+    "named": true,
     "fields": {}
   },
   {
-    "type": "hello",
+    "type": "explicitSequence",
+    "named": true,
+    "fields": {
+      "type": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "!",
+            "named": false
+          },
+          {
+            "type": "$",
+            "named": false
+          },
+          {
+            "type": "&",
+            "named": false
+          },
+          {
+            "type": "?",
+            "named": false
+          },
+          {
+            "type": "click",
+            "named": false
+          },
+          {
+            "type": "cycle",
+            "named": false
+          },
+          {
+            "type": "once",
+            "named": false
+          },
+          {
+            "type": "shuffle",
+            "named": false
+          },
+          {
+            "type": "stopping",
+            "named": false
+          },
+          {
+            "type": "~",
+            "named": false
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "conditionExpression",
+          "named": true
+        },
+        {
+          "type": "explicitSequence",
+          "named": true
+        },
+        {
+          "type": "glue",
+          "named": true
+        },
+        {
+          "type": "tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "textEsc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mixedLine",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "conditionExpression",
+          "named": true
+        },
+        {
+          "type": "explicitSequence",
+          "named": true
+        },
+        {
+          "type": "glue",
+          "named": true
+        },
+        {
+          "type": "tag",
+          "named": true
+        },
+        {
+          "type": "text",
+          "named": true
+        },
+        {
+          "type": "textEsc",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "TOP",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "tag",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "!",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "$",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "?",
+    "named": false
+  },
+  {
+    "type": "click",
+    "named": false
+  },
+  {
+    "type": "cycle",
+    "named": false
+  },
+  {
+    "type": "glue",
+    "named": true
+  },
+  {
+    "type": "once",
+    "named": false
+  },
+  {
+    "type": "shuffle",
+    "named": false
+  },
+  {
+    "type": "stopping",
+    "named": false
+  },
+  {
+    "type": "text",
+    "named": true
+  },
+  {
+    "type": "textEsc",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
     "named": false
   }
 ]

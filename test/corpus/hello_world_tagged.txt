@@ -1,0 +1,11 @@
+===||
+Hello world (tagged)
+===||
+Hello world #blessed
+
+---||
+(source_file
+  (TOP
+    (mixedLine
+      (text)
+      (tag))))

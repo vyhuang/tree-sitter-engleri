@@ -87,6 +87,10 @@
           "named": true
         },
         {
+          "type": "sequenceDivider",
+          "named": true
+        },
+        {
           "type": "tag",
           "named": true
         },
@@ -162,19 +166,11 @@
     "named": false
   },
   {
-    "type": "#",
-    "named": false
-  },
-  {
     "type": "$",
     "named": false
   },
   {
     "type": "&",
-    "named": false
-  },
-  {
-    "type": ":",
     "named": false
   },
   {
@@ -198,6 +194,10 @@
     "named": false
   },
   {
+    "type": "sequenceDivider",
+    "named": true
+  },
+  {
     "type": "shuffle",
     "named": false
   },
@@ -212,18 +212,6 @@
   {
     "type": "textEsc",
     "named": true
-  },
-  {
-    "type": "{",
-    "named": false
-  },
-  {
-    "type": "|",
-    "named": false
-  },
-  {
-    "type": "}",
-    "named": false
   },
   {
     "type": "~",

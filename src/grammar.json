@@ -163,16 +163,16 @@
             "type": "SEQ",
             "members": [
               {
-                "type": "STRING",
-                "value": "{"
+                "type": "PATTERN",
+                "value": "\\{[ \\t]*"
               },
               {
                 "type": "SYMBOL",
                 "name": "_inlineLogic"
               },
               {
-                "type": "STRING",
-                "value": "}"
+                "type": "PATTERN",
+                "value": "}[ \\t]*"
               }
             ]
           },
@@ -292,7 +292,7 @@
           }
         },
         {
-          "type": "STRING",
+          "type": "PATTERN",
           "value": ":"
         },
         {
@@ -320,15 +320,19 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_mixedTextAndLogic"
+              "name": "sequenceDivider"
             },
             {
-              "type": "STRING",
-              "value": "|"
+              "type": "SYMBOL",
+              "name": "_mixedTextAndLogic"
             }
           ]
         }
       }
+    },
+    "sequenceDivider": {
+      "type": "PATTERN",
+      "value": "[ \\t]*\\|[ \\t]*"
     },
     "_multilineSequenceObjects": {
       "type": "STRING",
@@ -340,18 +344,18 @@
     },
     "conditionExpression": {
       "type": "PATTERN",
-      "value": " "
+      "value": "[ \\t]+"
     },
     "_innerExpressions": {
       "type": "PATTERN",
-      "value": " "
+      "value": "[ \\t]+"
     },
     "tag": {
       "type": "SEQ",
       "members": [
         {
-          "type": "STRING",
-          "value": "#"
+          "type": "PATTERN",
+          "value": "[ \\t]*#"
         },
         {
           "type": "PATTERN",
@@ -424,10 +428,6 @@
     {
       "type": "SYMBOL",
       "name": "_inlineWS"
-    },
-    {
-      "type": "PATTERN",
-      "value": "[\\r\\n]"
     }
   ],
   "conflicts": [

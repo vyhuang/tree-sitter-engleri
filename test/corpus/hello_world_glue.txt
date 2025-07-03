@@ -1,10 +1,12 @@
 ===||
-Hello world
+Hello world (glue)
 ===||
-Hello world
+Hello <> world
 
 ---||
 (source_file
   (TOP
     (mixedLine
+      (text)
+      (glue)
       (text))))

@@ -1,0 +1,22 @@
+===||
+Explicit Sequence (nested)
+===||
+{once: a | {cycle: {shuffle: } | {?: #def } } }
+
+---||
+(source_file
+  (TOP
+    (mixedLine
+      (explicitSequence
+        (text)
+        (sequenceDivider)
+        (explicitSequence 
+          (text)
+          (explicitSequence (text))
+          (sequenceDivider)
+          (explicitSequence (tag))
+        )
+      )
+    )
+  )
+)

@@ -26,7 +26,7 @@ module.exports = grammar({
 
   extras: $ => [
     $._inlineWS,
-    /[\r\n]/, // TODO: remove later
+    // /[\r\n]/, // TODO: remove later
   ],
 
   conflicts: $ => [
@@ -95,7 +95,7 @@ module.exports = grammar({
 
     _inlineLogicOrGlueOrTags: $ => 
       prec.left(choice(
-        seq("{", $._inlineLogic, "}"), 
+        seq(/\{[ \t]*/, $._inlineLogic, /}[ \t]*/), 
         $.glue,
         repeat1($.tag)
       )),
@@ -123,7 +123,7 @@ module.exports = grammar({
               )
             ) 
           ),
-        ":",
+        /:/,
         $._sequenceObjects,
       );
     },
@@ -131,23 +131,22 @@ module.exports = grammar({
     _sequenceObjects: $ => choice($._inlineSequenceObjects), // $._multilineSequenceObjects),
     
     _inlineSequenceObjects: $ => 
-      prec.left(
-      repeat1(
-          choice($._mixedTextAndLogic, "|")
-      )),
+      prec.left(repeat1(choice($.sequenceDivider, $._mixedTextAndLogic))),
+    
+    sequenceDivider: $ => /[ \t]*\|[ \t]*/,
 
     _multilineSequenceObjects: $ => "",
 
     _placeholderText: $ => $.text,
 
 
-    conditionExpression: $ => / /,
+    conditionExpression: $ => /[ \t]+/,
 
-    _innerExpressions: $ => / /,
+    _innerExpressions: $ => /[ \t]+/,
 
 
     // tags
-    tag: $ => seq("#", new RustRegex(TAG_TEXT_CHAR_REGEX)),
+    tag: $ => seq(/[ \t]*#/, new RustRegex(TAG_TEXT_CHAR_REGEX)),
 
     __multiDivert: $ => "",
 

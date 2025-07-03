@@ -1,0 +1,22 @@
+
+===||
+Explicit Sequence
+===||
+{once: a | b | | c | }
+
+---||
+(source_file
+  (TOP
+    (mixedLine
+      (explicitSequence
+        (text)
+        (sequenceDivider)
+        (text)
+        (sequenceDivider)
+        (sequenceDivider)
+        (text)
+        (sequenceDivider)
+      )
+    )
+  )
+)
